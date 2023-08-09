@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<toc label="HPCC Systems® Data Tutorial" topic="index.html">
+  <topic label="Introduction" href="DataTutorialIntroduction.html">
+    <topic label="The ECL Development Process" href="DataTutorialIntroduction.html#Introduction_Case-Study-and-Tutorial"/>
+  </topic>
+  <topic label="Working with Data" href="Working_with_Data.html">
+    <topic label="The Original Data" href="Working_with_Data.html#The_Original_Data">
+      <topic label="Load the Incoming Data File to your Landing Zone" href="Working_with_Data.html#Uploading_a_file"/>
+      <topic label="Spray the Data File to your Thor Cluster" href="Working_with_Data.html#Spray_the_Data_File_to_your_DR-THOR_Cluster"/>
+    </topic>
+    <topic label="Begin Coding" href="Begin_Coding.html">
+      <topic label="Examine the Data" href="Begin_Coding.html#Examine_the_Data"/>
+      <topic label="Process the Data" href="Process_the_Data.html"/>
+      <topic label="Using our New Data" href="Using_our_Data.html"/>
+      <topic label="Index the Data" href="Index_the_Data.html"/>
+      <topic label="Build a Query" href="Query_the_Data.html"/>
+    </topic>
+    <topic label="Publishing your Thor Query" href="Publishing_your_Query.html">
+      <topic label="Execute using WsECL" href="Publishing_your_Query.html#Execute-using-the-Data-Delivery-Engine"/>
+    </topic>
+    <topic label="Compile and Publish the Roxie Query" href="Deploy_the_Roxie_Query.html">
+      <topic label="Publish the Roxie query" href="Deploy_the_Roxie_Query.html#Deploy_the_Query_to_Roxie"/>
+      <topic label="Run the Roxie Query in WsECL" href="Run_the_Roxie_Query.html"/>
+    </topic>
+  </topic>
+  <topic label="Summary" href="Summary.html"/>
+</toc>
