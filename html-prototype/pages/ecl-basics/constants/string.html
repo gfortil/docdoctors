@@ -1,0 +1,113 @@
+<div class="row">
+    <div class="col col-6 pt-2">
+        <div class="breadcrumb">
+            Homepage/ECL Basics/Constants/String
+        </div>
+    </div>
+    <div class="col col-6 text-end">
+        <button class="btn btn-sm btn-light text-uppercase">
+            <div>PDF</div>
+            <div class="ms-2">
+                <img src="./img/icons/pdf.png" />
+            </div>
+        </button>
+        <button class="btn btn-sm btn-info text-uppercase ms-2">
+            <div>Copy page</div>
+            <div class="ms-2">
+                <img src="./img/icons/copy.png" />
+            </div>
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-12 text-title">
+        ECL Basics
+    </div>
+    <div class="col col-12 text-sub-title">
+        Constants
+    </div>
+    <div class="col col-12 text-item-name">
+        <ul>
+            <li>String</li>
+        </ul>
+    </div>
+    <div class="col col-12 text-item-content">
+        All string literals must be contained within single quotation marks ( ' ' ). All ECL code is UTF-8 encoded,
+        which means
+        that all strings are also UTF-8 encoded, whether Unicode or non-Unicode strings. Therefore, you must use a UTF-8
+        editor
+        (such as the ECL IDE program).
+
+        To include the single quote character (apostrophe) in a constant string, prepend a backslash (\). To include the
+        backslash character (\) in a constant string, use two backslashes (\\) together.
+
+        <pre class="programlisting">
+STRING20 MyString2 := 'Fred\'s Place';
+//evaluated as: "Fred's Place"
+STRING20 MyString3 := 'Fred\\Ginger\'s Place';
+//evaluated as: "Fred\Ginger's Place"
+        </pre>
+
+        Other available escape characters are:
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td>\t</td>
+                    <td>tab</td>
+                </tr>
+                <tr>
+                    <td>\n</td>
+                    <td>new line</td>
+                </tr>
+                <tr>
+                    <td>\r</td>
+                    <td>carriage return</td>
+                </tr>
+            </tbody>
+        </table>
+        <pre class="programlisting">
+MyString1 := 'abcd';
+MyString2 := U'abcd\353'; // becomes 'abcdë'
+        </pre>
+
+        Hexadecimal string constants must begin with a leading "x" character. Only valid hexadecimal values (0-9, A-F)
+        may be in
+        the character string and there must be an even number of characters.
+        <pre class="programlisting">
+DATA2 MyHexString := x'0D0A'; // a 2-byte hexadecimal string
+        </pre>
+
+        Multiline Strings
+        A multiline string begins and ends with three single quotes (''').
+
+        Any quotes, tabs, or newlines in between the triple quotes are part of the string. While you can use the \
+        escape
+        character inside a multiline string, escaping is not necessary (except for the \ character). The \ character at
+        the end
+        of a line in a multiline string removes the end of line and joins the two lines together.
+
+        Examples:
+        <pre class="programlisting">
+'Single\n quotes';
+u'Can\'t be multiline and must escape embedded single quotes';
+u8'€';
+v'Can use various prefixes';
+d'7172737475';
+Q'ABCDE';
+
+'''Triple
+quotes can have embedded newlines, but also \
+support \n escape sequence''';
+'''Single quotes inside a multiline string don't need escaping''';
+u'''Unicode triple quotes
+should be the same, and also \
+support \n escape sequence''';
+u'''Don't have to be multiline and need not escape embedded quotes (but \'can' if they want)''';
+u8'''€''';
+v'''Can use same prefixes as single''';
+d'''7172737475''';
+Q'''ABCDE''';
+        </pre>
+    </div>
+</div>
+<script src="../js/editor.js"></script>

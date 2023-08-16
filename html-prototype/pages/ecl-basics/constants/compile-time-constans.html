@@ -1,0 +1,106 @@
+<div class="row">
+    <div class="col col-6 pt-2">
+        <div class="breadcrumb">
+            Homepage/ECL Basics/Constants/Compile Time Constants
+        </div>
+    </div>
+    <div class="col col-6 text-end">
+        <button class="btn btn-sm btn-light text-uppercase">
+            <div>PDF</div>
+            <div class="ms-2">
+                <img src="./img/icons/pdf.png" />
+            </div>
+        </button>
+        <button class="btn btn-sm btn-info text-uppercase ms-2">
+            <div>Copy page</div>
+            <div class="ms-2">
+                <img src="./img/icons/copy.png" />
+            </div>
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-12 text-title">
+        ECL Basics
+    </div>
+    <div class="col col-12 text-sub-title">
+        Constants
+    </div>
+    <div class="col col-12 text-item-name">
+        <ul>
+            <li>Compile Time Constants</li>
+        </ul>
+    </div>
+    <div class="col col-12 text-item-content">
+        The following system constants are available at compile time. These can be useful in creating conditional code.
+
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td>__ECL_VERSION__</td>
+                    <td>STRING containing the value of the platform version. For example, '6.4.0'</td>
+                </tr>
+                <tr>
+                    <td>__ECL_VERSION_MAJOR__</td>
+                    <td>An INTEGER containing the value of the major portion of the platform version. For example, '6'</td>
+                </tr>
+                <tr>
+                    <td>__ECL_VERSION_MINOR__</td>
+                    <td>An INTEGER containing the value of the minor portion of the platform version. For example, '4'</td>
+                </tr>
+            </tbody>
+        </table>
+
+        Examples:
+        <pre class="programlisting">
+// Any modules referenced inside the condition must be declared outside of the condition
+// This will avoid syntax errors
+prod_thor_dali := _Control.IPAddress.prod_thor_dali;
+#IF(_TARGET_PLATFORM_ in ['thorlcr'])
+Output('thor');
+prod_thor_dali;
+#ELSE
+Output('not thor');
+#END
+
+//Second example
+IMPORT STD;
+STRING14 fGetDateTimeString() :=
+#IF(__ECL_VERSION_MAJOR__ > 5) or ((__ECL_VERSION_MAJOR__ = 5) AND (__ECL_VERSION_MINOR__ >= 2))
+STD.Date.SecondsToString(STD.Date.CurrentSeconds(true), '%Y%m%d%H%M%S');
+#ELSE
+FUNCTION
+string14 fGetDimeTime():= // 14 characters returned
+BEGINC++
+#option action
+struct tm localt; // localtime in "tm" structure
+time_t timeinsecs; // variable to store time in secs
+time(&timeinsecs);
+localtime_r(&timeinsecs,&localt);
+char temp[15];
+strftime(temp , 15, "%Y%m%d%H%M%S", &localt); // Formats the localtime to YYYYMMDDhhmmss
+strncpy(__result, temp, 14);
+ENDC++;
+RETURN fGetDimeTime();
+END;
+#END;
+
+// Example using __CONTAINERIZED__
+over := 'overwrite=1 ';
+repl := 'replicate=1 ';
+action := 'action=spray ';
+srcplane :='srcplane=mydropzone ';
+srcfile := 'srcfile=originalperson ';
+dstname:='dstname=JD::originalperson ' ;
+//dstcluster:= 'dstcluster=data '; // for containerized
+//dstcluster:= 'dstcluster=mythor '; // for bare-metal
+dstcluster := IF(__CONTAINERIZED__, 'dstcluster=data ','dstcluster=mythor ');
+fmt:= 'format=fixed ';
+recsize:='recordsize=124 ';
+cmd := over + repl + action + srcplane + srcfile + dstname
++ dstcluster + fmt + recsize;
+STD.File.DfuPlusExec(cmd);
+        </pre>
+    </div>
+</div>
+<script src="../js/editor.js"></script>

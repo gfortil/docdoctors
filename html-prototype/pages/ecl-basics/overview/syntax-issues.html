@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col col-6 pt-2">
+        <div class="breadcrumb">
+            Homepage/ECL Basics/Overview/Syntax Issues
+        </div>
+    </div>
+    <div class="col col-6 text-end">
+        <button class="btn btn-sm btn-light text-uppercase">
+            <div>PDF</div>
+            <div class="ms-2">
+                <img src="./img/icons/pdf.png" />
+            </div>
+        </button>
+        <button class="btn btn-sm btn-info text-uppercase ms-2">
+            <div>Copy page</div>
+            <div class="ms-2">
+                <img src="./img/icons/copy.png" />
+            </div>
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-12 text-title">
+        ECL Basics
+    </div>
+    <div class="col col-12 text-sub-title">
+        Overview
+    </div>
+    <div class="col col-12 text-item-name">
+        <ul>
+            <li>Syntax Issues</li>
+        </ul>
+    </div>
+    <div class="col col-12 text-item-content">
+        ECL is not case-sensitive. White space is ignored, allowing formatting for readability as needed.
+        
+        Comments in ECL code are supported. Block comments must be delimited with /* and */.
+
+        <pre class="programlisting">
+/* this is a block comment - the terminator can be on the same line
+or any succeeding line -- everything in between is ignored */
+        </pre>
+
+        Single-line comments must begin with //.
+
+        <pre class="programlisting">
+// this is a one-line comment
+        </pre>
+
+        ECL uses the standard object.property syntax used by many other programming languages (however, ECL is not an
+        object-oriented language) to qualify Definition scope and disambiguate field references within tables:
+
+        <pre class="programlisting">
+ModuleName.Definition //reference an definition from another module/folder
+        </pre>
+        <pre class="programlisting">
+Dataset.Field //reference a field in a dataset or recordset
+        </pre>
+    </div>
+</div>
+<script src="../js/editor.js"></script>

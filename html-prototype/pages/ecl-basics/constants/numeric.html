@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col col-6 pt-2">
+        <div class="breadcrumb">
+            Homepage/ECL Basics/Constants/Numeric
+        </div>
+    </div>
+    <div class="col col-6 text-end">
+        <button class="btn btn-sm btn-light text-uppercase">
+            <div>PDF</div>
+            <div class="ms-2">
+                <img src="./img/icons/pdf.png" />
+            </div>
+        </button>
+        <button class="btn btn-sm btn-info text-uppercase ms-2">
+            <div>Copy page</div>
+            <div class="ms-2">
+                <img src="./img/icons/copy.png" />
+            </div>
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-12 text-title">
+        ECL Basics
+    </div>
+    <div class="col col-12 text-sub-title">
+        Constants
+    </div>
+    <div class="col col-12 text-item-name">
+        <ul>
+            <li>Numeric</li>
+        </ul>
+    </div>
+    <div class="col col-12 text-item-content">
+        Numeric constants containing a decimal portion are treated as REAL values (scientific
+        notation is allowed) and those
+        without are treated as INTEGER (see Value Types). Integer constants may be decimal,
+        unsigned, hexadecimal, or binary
+        values. Hexadecimal values are specified with either a leading "0x" or a trailing "x"
+        character. Binary values are
+        specified with either a leading "0b" or a trailing "b" character. Decimal values are
+        specified with trailing "d"
+        character. Unsigned values are specified with a trailing "u" character.
+
+        <pre class="programlisting">
+MyInt1 := 10; // value of MyInt1 is the INTEGER value 10
+MyInt2 := 0x0A; // value of MyInt2 is the INTEGER value 10
+MyInt3 := 0Ax; // value of MyInt3 is the INTEGER value 10
+MyInt4 := 0b1010; // value of MyInt4 is the INTEGER value 10
+MyInt5 := 1010b; // value of MyInt5 is the INTEGER value 10
+MyUint := 10u // value of MyUint is the UNSIGNED value 10
+MyReal1 := 10.0; // value of MyReal1 is the REAL value 10.0
+MyReal2 := 1.0e1; // value of MyReal2 is the REAL value 10.0
+MyDec1 := 10d // value of MyDec1 is the DECIMAL value 10
+MyDec2 := 3.14159265358979323846d // value of MyDec2 is the DECIMAL
+// value 3.14159265358979323846
+// a REAL type would lose precision
+        </pre>
+    </div>
+</div>
+<script src="../js/editor.js"></script>
