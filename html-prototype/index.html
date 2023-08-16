@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPCC Systems</title>
+
+    <!-- Bootstrap -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- Custom -->
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body class="dark">
+    <header>
+        <div class="row mx-0">
+            <div class="col col-12 col-lg-2 col-md-3 col-sm-4">
+                <a href="index.html">
+                    <img src="./img/logo.png" style="margin-top: 5px;" />
+                </a>
+            </div>
+            <div class="col col-12 col-lg-6 col-sm-8">
+                <form>
+                    <div class="row mt-2">
+                        <div class="col col-12 col-md-6">
+                            <select class="form-control form-select">
+                                <option selected>All</option>
+                                <option value="1">Introduction</option>
+                                <option value="2">ECL Basics</option>
+                            </select>
+                        </div>
+                        <div class="col col-12 col-md-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <button type="button" class="btn bg-white">
+                                    <img src="./img/icons/search.png" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="row mx-0">
+            <div class="col col-12 col-md-4">
+                <div class="left-menu">
+                    <h4 class="menu-bar-title">ECL Language Reference</h4>
+                    <ul class="menu-bar">
+                        <li class="menu-bar-group active">
+                            <a class="menu-bar-group-title">Introduction</a>
+                            <ul class="menu-bar-sub-group">
+                                <span class="menu-bar-sub-group-title">Documentation Structure</span>
+                                <span class="menu-bar-sub-group-title">Documentation Conventions</span>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link" link="introduction/conventions/ecl-syntax-case.html">ECL Syntax Case</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link" link="introduction/conventions/optional-items.html">Optional items</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link" link="introduction/conventions/example-code.html">Example code</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-bar-group active">
+                            <a class="menu-bar-group-title">ECL Basics</a>
+                            <ul class="menu-bar-sub-group">
+                                <span class="menu-bar-sub-group-title">Overview</span>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link" link="ecl-basics/overview/definitions-versus-actions.html">Definitions versus Actions</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link" link="ecl-basics/overview/syntax-issues.html">Syntax Issues</a>
+                                </li>
+                                <span class="menu-bar-sub-group-title">Constants</span>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link" link="ecl-basics/constants/string.html">String</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link" link="ecl-basics/constants/numeric.html">Numeric</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link" link="ecl-basics/constants/compile-time-constans.html">Compile Time Constants</a>
+                                </li>
+                                <span class="menu-bar-sub-group-title">Definitions</span>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Definition Name Rules</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Reserved Words</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Definition Naming</a>
+                                </li>
+                                <span class="menu-bar-sub-group-title">Basic Definition Types</span>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Boolean Definitions</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Value Definitions</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Set Definitions</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Set Ordering and Indexing</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Record Set Definitions</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Record Set Ordering and Indexing</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">TypeDef Definitions</a>
+                                </li>
+                                <span class="menu-bar-sub-group-title">Recordset Filtering</span>
+                                <span class="menu-bar-sub-group-title">Function Definitions</span>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Simple Value Type Parameters</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">SET Parameters</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Passing DATASET Parameters</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Passing DICTIONARY Parameters</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Passing Typeless Parameters</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Passing Function Parameters</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Passing NAMED Parameters</a>
+                                </li>
+                                <span class="menu-bar-sub-group-title">Definifion Visibility</span>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">"Global"</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Module</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Local</a>
+                                </li>
+                                <span class="menu-bar-sub-group-title">Field and Definition Qualification</span>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Imported Definitions</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Fields in Datasets</a>
+                                </li>
+                                <li class="menu-bar-item">
+                                    <a class="menu-bar-link">Scope Resolution Operator</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col col-12 col-md-8">
+                <div class="content content-bg-home">
+                    <div class="row">
+                        <div class="col col-6 pt-2">
+                            <div class="breadcrumb">
+                                Homepage
+                            </div>
+                        </div>
+                        <div class="col col-12 text-item-content">
+                            <strong>
+                                Boca Raton Documentation Team
+                            </strong>
+                            <br />
+                            <br />
+                    
+                            © 2021 HPCC Systems®. All rights reserved. Except where otherwise noted, ECL Language
+                            Reference content licensed under
+                            Creative Commons public license.
+                    
+                            <br />
+                            <br />
+                    
+                    
+                            We welcome your comments and feedback about this document via email to
+                            <docfeedback@hpccsystems.com> subject to the HPCC
+                                Contribution Agreement at: hpccsystems.com/contribution. Please include Documentation
+                                Feedback in the subject line
+                                and reference the document name, page numbers, and current Revision Number in the text
+                                of the message.
+                    
+                                <br />
+                                <br />
+                    
+                                LexisNexis and related logos, designs, trade dress, and trademarks are owned by Reed
+                                Elsevier Properties Inc. and
+                                its affiliates, used under license and not subject to the Creative Commons license.
+                                Other trademarks owned by their
+                                respective companies and not subject to the Creative Commons license.
+                    
+                                <br />
+                                <br />
+                    
+                                All names and example data used in this manual are fictitious. Any similarity to actual
+                                persons, living or dead, is
+                                purely coincidental.
+                    
+                                <br />
+                                <br />
+                    
+                                This document is licensed under the Creative Commons License CC BY-ND 3.0 applicable to
+                                the jurisdiction of the
+                                principal location of the user, as available; otherwise, the CC BY-ND 3.0 Unported
+                                (https://creativecommons.org/licenses/by-nd/3.0/).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="row mx-0">
+            <div class="col col-5">
+                <a class="d-none" ref="footer-prev-link" href="javascript: void(0)">
+                    <div class="float-start">
+                        <img src="./img/icons/arrow-gray-left.png" />
+                    </div>
+                    <div class="ms-2 d-inline float-start text-start">
+                        <div>PREVIOUS</div>
+                        <div class="fst-italic" ref="footer-prev-text"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col col-2 text-center">
+                <a href="index.html">
+                    <div>
+                        <img src="./img/icons/home.png" />
+                    </div>
+                    <div>HOME</div>
+                </a>
+            </div>
+            <div class="col col-5">
+                <a class="d-none"ref="footer-next-link" href="javascript: void(0)">
+                    <div class="float-end">
+                        <img src="./img/icons/arrow-gray-right.png" />
+                    </div>
+                    <div class="me-2 d-inline-block float-end text-end">
+                        <div>NEXT</div>
+                        <div class="fst-italic" ref="footer-next-text"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom -->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

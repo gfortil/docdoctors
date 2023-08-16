@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  hat-html:
+    container_name: hat-html
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 80:80

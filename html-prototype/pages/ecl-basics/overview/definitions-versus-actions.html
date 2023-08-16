@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col col-6 pt-2">
+        <div class="breadcrumb">
+            Homepage/ECL Basics/Overview/Definitions versus actions
+        </div>
+    </div>
+    <div class="col col-6 text-end">
+        <button class="btn btn-sm btn-light text-uppercase">
+            <div>PDF</div>
+            <div class="ms-2">
+                <img src="./img/icons/pdf.png" />
+            </div>
+        </button>
+        <button class="btn btn-sm btn-info text-uppercase ms-2">
+            <div>Copy page</div>
+            <div class="ms-2">
+                <img src="./img/icons/copy.png" />
+            </div>
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-12 text-title">
+        ECL Basics
+    </div>
+    <div class="col col-12 text-sub-title">
+        Overview
+    </div>
+    <div class="col col-12 text-item-name">
+        <ul>
+            <li>Definitions versus actions</li>
+        </ul>
+    </div>
+    <div class="col col-12 text-item-content">
+        Functionally, there are two types of ECL code: Definitions (AKA Attribute definitions) and executable Actions. Actions
+        are not valid for use in expressions because they do not return values. Most ECL code is composed of definitions.
+        <br /><br />
+        Definitions only define what is to be done, they do not actually execute. This means that the ECL programmer should
+        think in terms of writing code that specifies what to do rather than how to do it. This is an important concept in that,
+        the programmer is telling the supercomputer what needs to happen and not directing how it must be accomplished. This
+        frees the super-computer to optimize the actual execution in any way it needs to produce the desired result.
+        <br /><br />
+        A second consideration is: the order that Definitions appear in source code does not define their execution order--ECL
+        is a non-procedural language. When an Action (such as OUTPUT) executes, all the Definitions it needs to use (drilling
+        down to the lowest level Definitions upon which others are built) are compiled and optimized--in other words, unlike
+        other programming languages, there is no inherent execution order implicit in the order that definitions appear in
+        source code (although there is a necessary order for compilation to occur without error--forward references are not
+        allowed). This concept of "orderless execution" requires a different mindset from standard, order-dependent programming
+        languages because it makes the code appear to execute "all at once."
+    </div>
+</div>

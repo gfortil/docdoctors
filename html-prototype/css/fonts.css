@@ -1,0 +1,87 @@
+/* Loading external fonts */
+@import "https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp";
+
+/* Loading local fonts */
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 100;
+    font-style: normal;
+    src: url("../fonts/SourceSansPro-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 100;
+    font-style: italic;
+    src: url("../fonts/SourceSansPro-ExtraLightItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+    font-style: normal;
+    src: url("../fonts/SourceSansPro-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+    font-style: italic;
+    src: url("../fonts/SourceSansPro-LightItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/SourceSansPro-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    font-style: italic;
+    src: url("../fonts/SourceSansPro-Italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 500;
+    font-style: normal;
+    src: url("../fonts/SourceSansPro-SemiBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 500;
+    font-style: italic;
+    src: url("../fonts/SourceSansPro-SemiBoldItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+    font-style: normal;
+    src: url("../fonts/SourceSansPro-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+    font-style: italic;
+    src: url("../fonts/SourceSansPro-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 900;
+    font-style: normal;
+    src: url("../fonts/SourceSansPro-Black.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 900;
+    font-style: italic;
+    src: url("../fonts/SourceSansPro-BlackItalic.woff") format("woff");
+}
